@@ -15,7 +15,7 @@ Disclaimer: I have tuned the dotfiles for my own use. Some of the setup may not 
 ```bash
 $ cd ~
 $ git clone https://github.com/whuhacker/dotfiles.git & cd dotfiles
-$ rsync --exclude ".git/" --exclude ".DS_Store" --exclude "README.md" -avh --no-perms . ~
+$ rsync --exclude ".git/" --exclude "solarized/" --exclude ".DS_Store" --exclude "README.md" -avh --no-perms . ~
 $ source ~/.bash_profile
 
 # don't forget to change your git username and email
@@ -31,3 +31,9 @@ You may want to install some common [Homebrew](http://brew.sh) formulae when set
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ ./brew.sh
 ```
+
+## Solarized color scheme
+
+[Solarized](https://github.com/altercation/solarized) is precision color scheme for multiple applications (terminal, vim, etc.) with both dark/light modes, which is popular among Mac users. To apply the recommended theme to Terminal.app,
+1. Double click the `Solarized Dark ansi.terminal` and `Solarized Light ansi.terminal` in the `solarized` folder.
+2. Open Teminal.app, select Preferences > Profiles, choose Solarized as the default profile.
