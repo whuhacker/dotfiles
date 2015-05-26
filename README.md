@@ -8,13 +8,13 @@ Below is my vim:
 
 ![Screenshot of my vim](http://i.imgur.com/nZsXvQU.jpg?1)
 
-Disclaimer: I have tuned the dotfiles for my own use. Some of the setup may not be good for you.
+**Disclaimer:** These dotfiles are for my own use. Some of the configuration may not be suitable for you.
 
 ## Installation
 
 ```bash
 $ cd ~
-$ git clone https://github.com/whuhacker/dotfiles.git & cd dotfiles
+$ git clone https://github.com/whuhacker/dotfiles.git && cd dotfiles
 $ rsync --exclude ".git/" --exclude "solarized/" --exclude ".DS_Store" --exclude "README.md" -avh --no-perms . ~
 $ source ~/.bash_profile
 
