@@ -1,0 +1,7 @@
+[user]
+	email = zengxi@hihex.com
+[color]
+	ui = true
+[core]
+	editor = vim
+	autocrlf = input
