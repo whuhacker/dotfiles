@@ -35,5 +35,6 @@ $ ./brew.sh
 ## Solarized color scheme
 
 [Solarized](https://github.com/altercation/solarized) is precision color scheme for multiple applications (terminal, vim, etc.) with both dark/light modes, which is popular among Mac users. To apply the recommended theme to Terminal.app,
+
 1. Double click the `Solarized Dark ansi.terminal` and `Solarized Light ansi.terminal` in the `solarized` folder.
 2. Open Teminal.app, select Preferences > Profiles, choose Solarized as the default profile.
