@@ -60,4 +60,5 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/build-tools/21.1.2:$PATH
+export ANDROID_NDK_HOME=$HOME/Library/Android/android-ndk-r10e
 export PATH=$HOME/Library/Android/android-ndk-r10d:$PATH
