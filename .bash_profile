@@ -13,8 +13,17 @@ alias grep='grep --color'
 alias egrep='egrep --color'
 alias fgrep='fgrep --color'
 
+# set a fancy prompt (non-color, unless we know we "want" color)
 # Prompt style like Linux
-export PS1='\u@\h:\w$ '
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+if [ "$color_prompt" = yes ]; then
+    export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    export PS1='\u@\h:\w\$ '
+fi
+unset color_prompt
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
@@ -54,11 +63,20 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
+# Add tab completion for K8S command kubectl
+source <(kubectl completion bash)
 
 # For Android Studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_HOME/emulator:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/build-tools/21.1.2:$PATH
+export PATH=$ANDROID_HOME/build-tools/28.0.3:$PATH
 export ANDROID_NDK_HOME=$HOME/Library/Android/android-ndk-r10e
 export PATH=$HOME/Library/Android/android-ndk-r10e:$PATH
+# For kubectl aws-iam-authenticator
+export PATH=$HOME/bin:$PATH
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
