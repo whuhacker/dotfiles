@@ -77,6 +77,12 @@ export ANDROID_NDK_HOME=$HOME/Library/Android/android-ndk-r10e
 export PATH=$HOME/Library/Android/android-ndk-r10e:$PATH
 # For kubectl aws-iam-authenticator
 export PATH=$HOME/bin:$PATH
-
+# For ssh Linux servers
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# For Python
+if brew list | grep python > /dev/null ; then
+  alias python=/usr/local/bin/python3
+  alias pip=/usr/local/bin/pip3
+fi
